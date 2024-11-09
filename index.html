@@ -13,6 +13,49 @@
     <link rel="stylesheet" href="/style/index.css">
 </head>
 <body>
+
+    <header class="layout">
+        <img src="/assets/img/logo.svg" alt="Logomarca">
+    </header>
+
+    <main class="layout">
+        <div class="left-container">
+            <div class="header">
+                <h1>Solicitação de reembolso</h1>
+                <p>Informe os dados da despesa para solicitar reembolso. 
+                    A despesa será analisada e reembolsada em até 30 dias.</p>
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <div class="input-wrapper">
+                        <label for="expense-title">Título da Despesa</label>
+                        <input type="text" placeholder="Despesa" id="expense-title" name="expense-title">
+                    </div>
+                    <div>
+                        <div class="input-wrapper">
+                            <label for="expense-category">Categoria</label>
+                            <select name="expense-category" id="expense-category">
+                                <option value="Alimentacao">Alimentação</option>
+                                <option value="Hospedagem">Hospedagem</option>
+                                <option value="Transporte">Transporte</option>
+                                <option value="Serviços">Serviços</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="expense-value">Valor</label>
+                            <input type="number" placeholder="R$ 0,00" id="expense-value" name="expense-value">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <button type="submit">Adicionar Despesa</button>
+        </div>
+        <div class="right-container">
+
+        </div>
+    </main>
+    
     
 
 

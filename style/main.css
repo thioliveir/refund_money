@@ -1,0 +1,35 @@
+main {
+    max-width: 85rem;
+    margin-inline: auto;
+    padding: 0 8.875rem 12.5rem;
+    display: flex;
+    gap: 1.25rem;
+
+    & .left-container {
+        width: 28.875rem;
+        background-color: var(--gray500);
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        & .header {
+            display: grid;
+            gap: .75rem;
+
+            & h1 {
+                font: var(--title-lg);
+            }
+            & p {
+                font: var(--text-md);
+            }
+        }
+        
+    }
+
+    & .right-container {
+        width: 37.5rem;
+        background-color: var(--gray500);
+        padding: 2.5rem;
+    }
+}

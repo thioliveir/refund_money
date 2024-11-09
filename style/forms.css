@@ -1,0 +1,15 @@
+form {
+    width: 100%;
+
+    & fieldset {
+        border: none;
+    }
+}
+
+label {
+    font: var(--text-label);
+    color: var(--gray200);
+    display: block;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+}
