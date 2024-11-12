@@ -30,6 +30,26 @@
 html {
     font: var(--text-md);
 }
+
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4ece9;
+}
+
 body {
+    width: 100%;
+    height: 100vh;
     background-color: var(--gray400);
+}
+
+ul {
+    list-style: none;
 }

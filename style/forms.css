@@ -3,6 +3,20 @@ form {
 
     & fieldset {
         border: none;
+        display: grid;
+        gap: 1rem;
+
+        & div:not(.input-wrapper) {
+            display: flex;
+            gap: 1rem;
+
+            & div:first-child {
+                flex: 2;
+            }
+            & div:last-child {
+                flex: 1;
+            }
+        }
     }
 }
 
@@ -12,4 +26,41 @@ label {
     display: block;
     margin-bottom: .5rem;
     text-transform: uppercase;
+}
+
+input, select {
+    appearance: none;
+    width: 100%;
+    padding: .9375rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    color: var(--gray100);
+    background-color: #eef1ef;
+    outline: 2px solid var(--gray300);
+
+    &::placeholder {
+        color: var(--gray300);
+    }
+
+    &:focus {
+        outline: 2px solid var(--green100);
+    }
+}
+
+
+
+select {
+    appearance: none;
+    background-image: url(../assets/img/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 1.25rem auto;
+
+    & option {
+        color: var(--gray100);
+    }
+
+    &:invalid {
+        color: var(--gray300);
+    }
 }

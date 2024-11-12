@@ -6,8 +6,9 @@ main {
     gap: 1.25rem;
 
     & .left-container {
-        width: 28.875rem;
+        max-width: 28.875rem;
         background-color: var(--gray500);
+        border-radius: 1rem;
         padding: 2.5rem;
         display: flex;
         flex-direction: column;
@@ -28,8 +29,107 @@ main {
     }
 
     & .right-container {
-        width: 37.5rem;
+        min-width: 37.5rem;
         background-color: var(--gray500);
+        border-radius: 1rem;
         padding: 2.5rem;
+
+        & header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:0 0 1.5rem 0;
+            margin-bottom: 1.5rem;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: var(--gray400);
+            
+
+            & h1 {
+                display: flex;
+                align-items: center;
+                font: var(--text-lg);
+                color: var(--gray200);
+
+                & i {
+                    margin: 0 .5rem;
+                    font-style: normal;
+                    color: var(--gray300)
+                }
+
+                & span {
+                    font: var(--text-label);
+                }
+
+            }
+
+            h2 {
+                font: var(--title-md);
+
+                & small {
+                    font: var(--text-sm);
+                    margin-right: .25rem;
+                }
+            }
+        }
+
+        & ul {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            & .expense {
+                display: flex;
+                align-items: center;
+                height: 2.375rem;
+                background-color: #eef1ef;
+                border-radius: 8px;
+                padding-inline: .5rem;
+
+                & img:first-child {
+                    width: 2rem;
+                    height: 2rem;
+                    margin-right: 0.75rem;
+                }
+
+                & > div {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+
+                    & strong {
+                        font: var(--title-sm);
+                        color: var(--gray100);
+                    }
+
+                    & span {
+                        font: var(--text-sm);
+                        color: var(--gray200);
+                    }
+                }
+
+                & .expense-money {
+                    font: var(--subtitle);
+                    color: var(--gray100);
+
+                    & small {
+                        font: var(--text-sm);
+                        color: var(--gray200);
+                        margin-right: .25rem;
+                    }
+                }
+
+                & .remove-icon {
+                    height: 1rem;
+                    margin-left: .5rem;
+                    cursor: pointer;
+                    transition: opacity 0.2s;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
     }
 }
